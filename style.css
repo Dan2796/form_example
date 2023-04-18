@@ -37,6 +37,9 @@ body {
 }
 
 .left-hand-side {
+  background-image: url("pictures/mountains.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   min-height: 300px;
   width: 50vw;
@@ -44,14 +47,6 @@ body {
   flex: auto;
   background-color: violet;
   overflow: hidden;
-}
-
-/* width to height ratio is 2:3 */
-.main-image {
-  width: 100%;
-  height: 3/2 width;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 .right-hand-side {
