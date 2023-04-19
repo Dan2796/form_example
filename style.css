@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
+:root{
+  --button_blue: rgb(52, 52, 243);
+}
 
 body {
   min-height: 100vh;
@@ -11,6 +14,7 @@ body {
 }
 
 .header-band {
+  font-size: 2rem;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -22,7 +26,7 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
   color: white;
 }
 
@@ -44,7 +48,7 @@ body {
   position: relative;
   min-height: 100vh;
   width: 50vw;
-  min-width: 400px;
+  min-width: 500px;
   flex: auto;
   overflow: hidden;
 }
@@ -60,6 +64,7 @@ body {
 }
 
 .header-right {
+  max-width: 600px;
   padding-left: 30px;
   padding-right: 40px;
   font-size: 1.5rem;
@@ -72,6 +77,9 @@ form {
   flex-direction: column;
 }
 
+.star {
+  color: red;
+}
 
 .input-part {
   background-color: white;
@@ -99,8 +107,27 @@ label {
   color: rgb(59, 59, 59);
 }
 
+input:invalid {
+  outline: 0;
+  border: solid 2px red;
+}
+
+input:valid {
+  outline: 0;
+  border: solid 2px green;
+}
+
+input:placeholder-shown{
+  border: solid 2px lightgrey;
+}
+
+input:focus {
+  outline: 0;
+  border: solid 2px var(--button_blue);
+}
+
 button {
-  background-color: rgb(52, 52, 243);
+  background-color: var(--button_blue);
   font-weight: 700;
   color: white;
   width: 200px;

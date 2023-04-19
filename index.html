@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script> 
     <title>Sign-up Form</title>
 </head>
 <body>
@@ -19,46 +20,46 @@
   </div>
   <div class="right-hand-side">
     <div class="header-right">
-      <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams. Sign up <emph>now</emph> to get started.</p>
-      <p>You know you want to.</p>
+      <p>This is not a real online service! You know you need something like this in your life to help you realise your deepest dreams. Sign up <em>now</em> to get started.</p>
+      <p>You <em>know</em> you want to.</p>
     </div>
-    <form>
+    <form id="form">
       <div class="input-part">
         <h2>Let's do this!</h2>
-        <p>Fields marked with an asterisk (*) are required</p>
+        <p>Fields marked with an asterisk (<span class="star" aria-label="required">*</span>) are required</p>
         <div class="row-container">
           <div class="item-container">
-            <label for="first-name">First name</label>
-            <input type="text" name="first-name" id="first-name">
+            <label for="first-name">First name <span class="star" aria-label="required">*</span></label>
+            <input type="text" name="first-name" id="first-name" required placeholder="Jane">
           </div>
 
           <div class="item-container">
-            <label for="last-name">Last name</label>
-            <input type="text" name="last-name" id="last-name">
+            <label for="last-name">Last name <span class="star" aria-label="required">*</span></label>
+            <input type="text" name="last-name" id="last-name" required placeholder="Smith">
           </div>
         </div>
           
         <div class="row-container">
           <div class="item-container">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <label for="email">Email <span class="star" aria-label="required">*</span></label>
+            <input type="email" name="email" id="email" required placeholder="janesmith@hotmail.com">
           </div>
           
           <div class="item-container">
             <label for="phone">Phone number</label>
-            <input type="tel" name="phone" id="phone">
+            <input type="tel" name="phone" id="phone" placeholder="">
           </div>
         </div>
             
         <div class="row-container">
           <div class="item-container">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <label for="password">Password <span class="star" aria-label="required">*</span></label>
+            <input type="password" name="password" id="password" required placeholder="******" minLength="6" onchange='check_pass();'>
           </div>
             
           <div class="item-container">
-            <label for="confirm-password">Password</label>
-            <input type="password" name="confirm-password" id="confirm-password">
+            <label for="confirm-password">Confirm Password <span class="star" aria-label="required">*</span></label>
+            <input type="password" name="confirm-password" id="confirm-password" required placeholder="******" onchange='check_pass();'>
           </div>
         </div>
       </div>
